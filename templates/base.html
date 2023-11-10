@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}{% endblock %}Simple ecommerce </title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'styles.css' %}">
+</head>
+<body>
+
+    <nav>
+        <a href="{% url 'index' %}" class="nav-link">All Products</a>
+        <a href="{% url 'show_cart' %}" class="nav-link">Cart: {{ cart_item_count }} item</a>
+    </nav>
+
+{% block content %}
+
+{% endblock %}
+
+</body>
+</html>
